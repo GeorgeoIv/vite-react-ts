@@ -1,36 +1,22 @@
-// import React, { useEffect } from 'react';
-// import { ListGroup, Row, Col } from 'reactstrap';
-// import { useTodoContext } from '../contexts/TodosContext';
-// import { useAppDispatch, useAppSelector } from '../redux/hooks';
-// import { getTodosThunk } from '../redux/slices/todosSlice';
-// import OneTodo from './OneTodo';
-// import TodosForm from './TodosForm';
+import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Container } from 'react-bootstrap';
+import DevPage from '../DevPage';
+import RoomsPage from '../RoomsPage';
 
-
-// export default function MainPage(): JSX.Element {
-//   const todos = useAppSelector((store) => store.todos);
-//   const dispatch = useAppDispatch();
-//   useEffect(() => {
-//     dispatch(getTodosThunk());
-//   }, []);
-//   return (
-//     <Row>
-//       <Col xs={8}>
-//         <TodosForm />
-//         <ListGroup>
-//           {todos.map((todo) => (
-//             <OneTodo key={todo.id} todo={todo} />
-//           ))}
-//         </ListGroup>
-//       </Col>
-//     </Row>
-//   );
-// }
-
-import React from 'react'
-
-export default function index() {
+export default function MainPage(): JSX.Element {
   return (
-    <div>index</div>
-  )
+    <Container className="mt-5" >
+      <Col>
+        <RoomsPage />
+      </Col>
+      <Col>
+        <Row>
+          <DevPage />
+        </Row>
+      </Col>
+    </Container>
+  );
 }
+

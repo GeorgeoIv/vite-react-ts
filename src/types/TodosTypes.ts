@@ -1,7 +1,6 @@
 export type TodoType = {
     id: number;
     room: string;
-    devices?: DevType[];
 };
 
 export type DevType = {

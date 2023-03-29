@@ -1,13 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import  userReducer  from './slices/userSlice';
+
 import roomsReducer from './slices/roomsSlice';
-// import favoriteReducer from './slices/favoriteSlice'
+
 
 export const store = configureStore({
   reducer: {
     rooms: roomsReducer,
-    // user: userReducer,
-    // favorite: favoriteReducer,
   },
 });
 
